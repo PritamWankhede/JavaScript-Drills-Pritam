@@ -9,7 +9,7 @@ function solution1(arrayOfObjects){
     }
     return emailArray;
 }
-// personsEmail(arrayOfObjects);
+
 
 //Solution 2
 function solution2(arrayOfObjects){
@@ -18,5 +18,19 @@ function solution2(arrayOfObjects){
        console.log(`Person age is ${arrayOfObjects[index].age} and hobbies are ${arrayOfObjects[index].hobbies}`);
      }
   }
-module.exports = {solution1,solution2};
+
+
+//Solution 3
+function solution3(arrayOfObjects){
+    let name = [];
+    for(let index=0; index<arrayOfObjects.length ;index++)
+     {
+      if(arrayOfObjects[index].country === 'Australia'){
+           name.push(arrayOfObjects[index].name);
+        }
+     }
+   return name;
+ }
+ 
+ module.exports = {solution1,solution2,solution3};
 
