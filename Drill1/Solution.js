@@ -31,6 +31,21 @@ function solution3(arrayOfObjects){
      }
    return name;
  }
- 
- module.exports = {solution1,solution2,solution3};
+
+
+
+
+// Solution 4
+function solution4(arrayOfObjects,index){
+    if(index >= 0 && index < arrayOfObjects.length){
+     if(index === 3){
+        console.log(`Name of Perosn is ${arrayOfObjects[index].name} and City is ${arrayOfObjects[index].city}` )
+     }
+     else{
+       console.log("Index is not 3");
+    }
+  }
+}
+
+module.exports = {solution1,solution2,solution3,solution4};
 
