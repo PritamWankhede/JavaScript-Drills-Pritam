@@ -11,4 +11,12 @@ function solution1(arrayOfObjects){
 }
 // personsEmail(arrayOfObjects);
 
-module.exports = {solution1};
+//Solution 2
+function solution2(arrayOfObjects){
+    for(let index=0; index < arrayOfObjects.length ;index++)
+     {
+       console.log(`Person age is ${arrayOfObjects[index].age} and hobbies are ${arrayOfObjects[index].hobbies}`);
+     }
+  }
+module.exports = {solution1,solution2};
+
