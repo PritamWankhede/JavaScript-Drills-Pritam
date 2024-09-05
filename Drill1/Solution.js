@@ -47,6 +47,8 @@ function solution4(arrayOfObjects,index){
   }
 }
 
+
+//solution 5
 function solution5(arrayOfObjects){
     let age = [];
     for(let index=0; index<arrayOfObjects.length ;index++)
@@ -56,6 +58,7 @@ function solution5(arrayOfObjects){
    return age;
  }
 
+ //solution 6
  function solution6(arrayOfObjects){
     
     for(let index=0; index < arrayOfObjects.length ;index++)
@@ -64,7 +67,7 @@ function solution5(arrayOfObjects){
     }
    }
  
- 
+ //solution 7
    function solution7(arrayOfObjects){
      if(arrayOfObjects.age === 25){
      console.log(`Person name is ${arrayOfObjects.name} and age is ${arrayOfObjects.age}`)
@@ -74,5 +77,17 @@ function solution5(arrayOfObjects){
     }
   }
  
-module.exports = {solution1,solution2,solution3,solution4,solution5,solution6,solution7};
+  //solution 8
+  function session8(arrayOfObjects){
+    let city = [];
+    let country = [];
+    for(let index=0;index<arrayOfObjects.length;index++)
+    {
+        city.push(arrayOfObjects[index].city);
+        country.push(arrayOfObjects[index].country);
+    }
+    return `City of Person ${city} and Contry of Person ${country}`;
+}
+
+module.exports = {solution1,solution2,solution3,solution4,solution5,solution6,solution7,session8};
 
