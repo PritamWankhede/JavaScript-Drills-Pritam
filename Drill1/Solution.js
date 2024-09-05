@@ -47,5 +47,16 @@ function solution4(arrayOfObjects,index){
   }
 }
 
-module.exports = {solution1,solution2,solution3,solution4};
+function solution5(arrayOfObjects){
+    let age = [];
+    for(let index=0; index<arrayOfObjects.length ;index++)
+     {
+        age.push(arrayOfObjects[index].age);
+     }
+   return age;
+ }
+
+ module.exports = {solution5}; 
+
+module.exports = {solution1,solution2,solution3,solution4,solution5};
 
