@@ -1,4 +1,4 @@
-const {solution1,solution2,solution3} = require('../Solutions/Solution1.js');
+const {solution1,solution2,solution3,solution4} = require('../Solutions/Solution1.js');
 const {users} = require('../User.js');
 
 //Solution 1 Testcases
@@ -15,3 +15,8 @@ console.log(solution2(users));
 console.log(solution3(users));
 // console.log(solution3(3));
 //console.log(solution3());
+
+//Solution 4 TestCases
+console.log(solution4(users));
+//console.log(solution4());
+//console.log(solution4([]));
