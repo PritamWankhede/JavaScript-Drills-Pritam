@@ -1,4 +1,4 @@
-const {solution1,solution2,solution3,solution4,solution5} = require('./Solution.js');
+const {solution1,solution2,solution3,solution4,solution5,solution6} = require('./Solution.js');
 const {arrayOfObjects} = require('./PersonData.js');
 
 //Solution 1 TestCases
@@ -22,8 +22,13 @@ console.log(solution4(arrayOfObjects,3));
 console.log(solution4(arrayOfObjects,2));
 console.log(solution4(arrayOfObjects,0));
 
-//Soolution 5 TestCases
+//Solution 5 TestCases
 console.log(solution5(arrayOfObjects));
 console.log(solution5());
 console.log(solution5("25"));
 console.log(solution5(30));
+
+//Solution 6 TestCases
+console.log(solution6(arrayOfObjects));
+console.log(solution6(arrayOfObjects));
+console.log(solution6(arrayOfObjects));

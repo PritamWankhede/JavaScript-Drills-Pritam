@@ -56,7 +56,14 @@ function solution5(arrayOfObjects){
    return age;
  }
 
- module.exports = {solution5}; 
+ function solution6(arrayOfObjects){
+    
+    for(let index=0; index < arrayOfObjects.length ;index++)
+    {
+      console.log(`First Hobby of Person is ${arrayOfObjects[index].hobbies[0]}`);
+    }
+   }
+ 
 
-module.exports = {solution1,solution2,solution3,solution4,solution5};
+module.exports = {solution1,solution2,solution3,solution4,solution5,solution6};
 
