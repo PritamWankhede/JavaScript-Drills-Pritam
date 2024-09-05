@@ -64,6 +64,15 @@ function solution5(arrayOfObjects){
     }
    }
  
-
-module.exports = {solution1,solution2,solution3,solution4,solution5,solution6};
+ 
+   function solution7(arrayOfObjects){
+     if(arrayOfObjects.age === 25){
+     console.log(`Person name is ${arrayOfObjects.name} and age is ${arrayOfObjects.age}`)
+    }
+    else{
+     console.log("Invalid age ");
+    }
+  }
+ 
+module.exports = {solution1,solution2,solution3,solution4,solution5,solution6,solution7};
 
