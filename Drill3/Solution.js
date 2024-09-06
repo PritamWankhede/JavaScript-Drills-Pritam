@@ -19,10 +19,23 @@ const {inventory} =require('./InventoryData');
 
 
 
-function solution2(inventory){
-    console.log([inventory.length]);
-    console.log(`Last car is a ${[inventory.length].car_make} ${[inventory.length].car_model}`);
-}
-// solution2(inventory);
+// function solution2(inventory){
+//     console.log([inventory.length]);
+//     console.log(`Last car is a ${inventory[inventory.length].car_make} ${inventory[inventory.length].car_model}`);
+// }
+// // solution2(inventory);
 
-module.exports={solution2};
+// module.exports={solution2};
+
+function solution3(inventory){
+  let carModels =[];
+     for(let index=0 ;index<inventory.length;index++){
+       carModels.push(inventory[index].car_model);
+     }
+     
+     return carModels.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+}
+// console.log(solution3(inventory));
+
+module.exports={solution3};
+
