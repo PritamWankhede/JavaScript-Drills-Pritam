@@ -37,12 +37,25 @@ const {inventory} =require('./InventoryData');
 // }
 // // console.log(solution3(inventory));
 
-function solution4(inventory){
-  for(let index=0;index<inventory.length;index++)
-  {
-    // console.log(inventory[index]);
-    console.log(inventory[index].car_year);
-  }
-}
-module.exports={solution4};
+// function solution4(inventory){
+//   for(let index=0;index<inventory.length;index++)
+//   {
+//     // console.log(inventory[index]);
+//     console.log(inventory[index].car_year);
+//   }
+// }
+// module.exports={solution4};
 
+
+function solution5(inventory){
+    let olderCars = [];
+    let oldCarCount = 0;
+  for(index =0 ;index < inventory.length;index++){
+    if(inventory[index].car_year < 2000){
+        olderCars.push(inventory[index].car_model);
+        oldCarCount++;
+    }
+  }
+  return `Count of Cars before 2000 year are ${oldCarCount} \n Car Models are ${olderCars}`
+}
+// console.log(solution5(inventory));
