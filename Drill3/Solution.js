@@ -27,15 +27,22 @@ const {inventory} =require('./InventoryData');
 
 // module.exports={solution2};
 
-function solution3(inventory){
-  let carModels =[];
-     for(let index=0 ;index<inventory.length;index++){
-       carModels.push(inventory[index].car_model);
-     }
+// function solution3(inventory){
+//   let carModels =[];
+//      for(let index=0 ;index<inventory.length;index++){
+//        carModels.push(inventory[index].car_model);
+//      }
      
-     return carModels.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-}
-// console.log(solution3(inventory));
+//      return carModels.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+// }
+// // console.log(solution3(inventory));
 
-module.exports={solution3};
+function solution4(inventory){
+  for(let index=0;index<inventory.length;index++)
+  {
+    // console.log(inventory[index]);
+    console.log(inventory[index].car_year);
+  }
+}
+module.exports={solution4};
 

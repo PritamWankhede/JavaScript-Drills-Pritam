@@ -1,4 +1,4 @@
-const {solution1,solution2,solution3} = require('./Solution');
+const {solution1,solution2,solution3,solution4} = require('./Solution');
 const {inventory} =require('./InventoryData');
 
 
@@ -14,3 +14,6 @@ console.log(solution2(inventory));
 console.log(solution3(inventory));
 // console.log(solution3());
 // console.log(solution3([]));
+
+solution4(inventory);
+//solution4();
