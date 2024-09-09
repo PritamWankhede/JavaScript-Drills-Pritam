@@ -20,4 +20,14 @@ const testObject = { name: "Bruce Wayne", age: 36, location: "Gotham" };
 // }
 // console.log(values(testObject));
 
+function pairs(obj) { 
+let arr = [];
+for(let key in obj)
+  {
+      arr.push([key,obj[key]]);
+  }
+ return arr;
+}
+console.log(pairs(testObject));
+
 
