@@ -31,19 +31,30 @@ const testObject = { name: "Bruce Wayne", age: 36, location: "Gotham" };
 // console.log(pairs(testObject));
 
 
-function mapObject(obj, cb){
-    let newObj = {};
-    for(let key in obj)
-    {
-        // console.log(cb(key));
-       newObj[cb(key)]=obj[key];  
+// function mapObject(obj, cb){
+//     let newObj = {};
+//     for(let key in obj)
+//     {
+//         // console.log(cb(key));
+//        newObj[cb(key)]=obj[key];  
       
-    }
-    return newObj;
- }
+//     }
+//     return newObj;
+//  }
 
- function map(key)
- {
-    return key.toUpperCase();
- }
- console.log(mapObject(testObject, map));
+//  function map(key)
+//  {
+//     return key.toUpperCase();
+//  }
+//  console.log(mapObject(testObject, map));
+
+function invert(obj){
+let newObj={};
+  for(let key in obj)
+  {
+    let value = obj[key]
+    newObj[value] = key;
+  }
+  return newObj;
+}
+console.log(invert(testObject));
