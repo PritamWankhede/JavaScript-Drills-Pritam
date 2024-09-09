@@ -1,4 +1,4 @@
-const items = [1, 2, 3, 4, 5, 5];
+// const items = [1, 2, 3, 4, 5, 5];
 
 // function findEach(elements,cb){
   
@@ -63,15 +63,33 @@ const items = [1, 2, 3, 4, 5, 5];
 // }
 // console.log(map(items,mapArray));
 
-function reduce(elements, cb, startingValue){
- let newEle=0;
-  for(let i=0;i<elements.length;i++)
-  {
-    newEle += cb(elements[i],startingValue);
-  }
-  return newEle;
+// function reduce(elements, cb, startingValue){
+//  let newEle=0;
+//   for(let i=0;i<elements.length;i++)
+//   {
+//     newEle += cb(elements[i],startingValue);
+//   }
+//   return newEle;
+// }
+// function reduceArray(element,startingValue){
+//   return element + startingValue;
+// }
+// console.log(reduce(items,reduceArray,0))
+
+
+const nestedArray = [1, [2], [[3]], [[[4]]]];
+
+function flatten(nestedArray){
+    let newArr=[];
+ for(let i=0;i<nestedArray.length;i++){
+    if(Array.isArray(nestedArray[i])){
+         newArr = newArr.concat(flatten(nestedArray[i]));
+    }else{
+       newArr.push(nestedArray[i]);
+    }
+ }
+return newArr;
 }
-function reduceArray(element,startingValue){
-  return element + startingValue;
-}
-console.log(reduce(items,reduceArray,0))
+
+console.log(flatten(nestedArray));
+
