@@ -50,16 +50,28 @@ const items = [1, 2, 3, 4, 5, 5];
 //      }
 //     console.log(filter(items,filterarray));
 
-function map(elements,cb){
-  let newArray=[];
-  for(let i=0;i<elements.length;i++){
-    newArray.push(cb(elements[i]))
+// function map(elements,cb){
+//   let newArray=[];
+//   for(let i=0;i<elements.length;i++){
+//     newArray.push(cb(elements[i]))
+//   }
+//   return newArray;
+// }
+
+// function mapArray(element){
+//   return element*2;
+// }
+// console.log(map(items,mapArray));
+
+function reduce(elements, cb, startingValue){
+ let newEle=0;
+  for(let i=0;i<elements.length;i++)
+  {
+    newEle += cb(elements[i],startingValue);
   }
-  return newArray;
+  return newEle;
 }
-
-function mapArray(element){
-  return element*2;
+function reduceArray(element,startingValue){
+  return element + startingValue;
 }
-
-console.log(map(items,mapArray));
+console.log(reduce(items,reduceArray,0))
