@@ -1,4 +1,4 @@
-const testObject = { name: "Bruce Wayne", age: 36, location: "Gotham" };
+
 
 // function keys(obj) {
 // let arr= [];
@@ -48,13 +48,38 @@ const testObject = { name: "Bruce Wayne", age: 36, location: "Gotham" };
 //  }
 //  console.log(mapObject(testObject, map));
 
-function invert(obj){
-let newObj={};
-  for(let key in obj)
-  {
-    let value = obj[key]
-    newObj[value] = key;
-  }
-  return newObj;
+// function invert(obj){
+// let newObj={};
+//   for(let key in obj)
+//   {
+//     let value = obj[key]
+//     newObj[value] = key;
+//   }
+//   return newObj;
+// }
+// console.log(invert(testObject));
+
+let testObject = { name: "Bruce Wayne", age: 36, location: "Gotham" };
+let genderProp = {gender:"Male"};
+function defaultsMethod(obj, defaultProps) 
+{
+    for(let key in defaultProps)
+    {
+        if(!obj.hasOwnProperty(key)){
+            obj[key] = defaultProps[key];
+        }
+    }
+    return obj;
 }
-console.log(invert(testObject));
+console.log(defaultsMethod(testObject, genderProp));
+
+
+function deleteKey(testObject){
+    delete testObject.gender
+   return testObject;
+}
+console.log(deleteKey(testObject));
+
+
+
+
